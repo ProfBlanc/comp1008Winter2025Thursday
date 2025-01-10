@@ -1,0 +1,34 @@
+Task 1
+Create a class named Greetings
+Create a main method in the class
+Output why you choose Computer Studies at Georgian College
+
+Task 2
+Create a class named AgeCalculator
+create a main method in the class
+    Ask user for year of birth
+    Output the user age in
+        years
+        months
+        days
+
+Task 3
+Create a class named ConverterPart1
+create a main method in the class
+Ask the user for a weight in pounds (convert to Integer)
+output that weight in kilograms
+
+Task 4
+Create a class named ConverterPart2
+create a main method in the class
+Ask the user for a height in meters (convert to Double)
+output that height in inches
+
+Task 5
+Create a class named ConverterPart3
+create a main method in the class
+Ask the user for a temperature in celsius (convert to Double)
+output that temperature in F
+
+
+

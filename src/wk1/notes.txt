@@ -1,0 +1,21 @@
+organization
+
+package
+    folders to store .java files
+
+.java
+    extension of java source files
+Naming Conventions
+    Class
+        PascalCase aka UpperCamelCase
+    method/function
+        camelCase
+    variables
+        inside of method
+            variables
+        outside method but inside class deginition
+            instance variable
+output
+    System.out.print/println/printf()
+input
+    System.console().readLine()
