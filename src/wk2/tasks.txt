@@ -12,8 +12,19 @@ version 1:
 select an index of array
 
 version 2
-Ask user to input a value so that, a random word is chosen
-    if statements
+Change version 1 => Generate 5 random sentences iso 1
+
+version 3
+Ask user to input a value so that, a random word is chosen (1 user input)
+    if statements. make sure that the input value is between 0 and the number of nouns1, verbs & nouns2
+    Bonus: ask the user for input 3 times
+
+
+
+
+
+
+
 
 
 Fun Task 2
