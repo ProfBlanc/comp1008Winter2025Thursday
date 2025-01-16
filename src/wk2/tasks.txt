@@ -1,0 +1,39 @@
+Fun Task 1
+
+SentenceGenerator
+
+noun    verb    noun
+
+Ben     loves   cars
+
+Array of values
+
+version 1:
+select an index of array
+
+version 2
+Ask user to input a value so that, a random word is chosen
+    if statements
+
+
+Fun Task 2
+
+Ask the user for their birthYear
+Calculate their age in years, months, days, hours,days & minutes
+
+Fun Task 3
+Generate a number between 1 and 20 (inclusively)
+Give the user 5 chances to guess the number
+On each guess, tell the user whether they are
+    too low or too high
+On the last (5th) guess, tell the user,
+half of the number is X, so they can correctly guess
+
+Fun Task 4
+Pizza Order Generator
+Ask user for size of Pizza (only accept Small, Medium & Large)
+Ask user for a max of 5 toppings. If user enters "", stop asking for toppings
+Summarize the Pizza Order by outputing
+You orded a {Size} pizza with the following toppings
+{topping1}, {topping2}, {toppingN}
+
