@@ -1,0 +1,16 @@
+What is a class:
+    template, model, blueprint aka factory
+        that produces or reproduces something
+
+
+
+Math Equation
+
+components/attributes
+    operand1
+    operator
+    operand2
+    result/answer
+
+actions/behaviours
+    calculate

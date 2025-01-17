@@ -53,3 +53,19 @@ Summarize the Pizza Order by outputting
 You ordered a {Size} pizza with the following toppings
 {topping1}, {topping2}, {toppingN}
 
+
+
+Fun Task 5
+
+Create a class named FuelCar
+    attributes
+        tankCapacity: bt 30-100 in litres
+        fuelLevel: 0- 100%
+        kilometresPerLitre: 10 or 30 (or be creative)
+    method
+        drive(doube/int of kilometers)
+            using the param, decrease the fuel level by a percentage
+
+    getFuelLevel()  returns fuel level
+    setTankCapacity: only accepts values b/t 30-100
+    setFuelLevel() only accepts values between 0-100
