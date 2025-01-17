@@ -49,7 +49,7 @@ Fun Task 4
 Pizza Order Generator
 Ask user for size of Pizza (only accept Small, Medium & Large)
 Ask user for a max of 5 toppings. If user enters "", stop asking for toppings
-Summarize the Pizza Order by outputing
-You orded a {Size} pizza with the following toppings
+Summarize the Pizza Order by outputting
+You ordered a {Size} pizza with the following toppings
 {topping1}, {topping2}, {toppingN}
 
