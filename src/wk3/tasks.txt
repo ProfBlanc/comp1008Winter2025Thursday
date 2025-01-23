@@ -1,1 +1,15 @@
-tasks
+Create a class named
+  TakeGoTrain
+
+      tapOn()    station/city source         return   cardBalance
+      tapOff()   station/city destination    return cardBalance 
+      tripTotal()    difference between starting tapBalance and ending tapBalance
+      getDuration()    station source, station destination
+                              create a random value for duration
+        
+
+What attributes do we need to make methods above functional?
+  cardBalance
+  station/city source
+  flatEntryPrice  (8 dollars)
+  
