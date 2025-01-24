@@ -19,28 +19,63 @@ What attributes do we need to make methods above functional?
   
     */
     
-    double cardBalance = 100;
+    private double cardBalance = 100;
 
     private String stationSource = "";
     private String stationDestination = "";
 
+    //mutli-dimensional array
+    /*
     String[] availableStations = {"Barrie", "Bradford", "Newmarket", "Maple", "Rutherford", "Downsview Park", "Union Station"};
-    float flatEntryPrice = 8f;
-    
-    void tapOn(String sourceStation){
+    */
+    private String[][] availableStationsMM = new String[][] {
         
+        {"Barrie", "Bradford", "Newmarket", "Maple", "Rutherford", "Downsview Park", "Union Station"}
+        ,
+        {"Danforth","Scarborough","Eglinton","Guildwood","Rouge Hill",
+        "Pickering","Durham College"}
+        ,
+        
+        {"Exhibition","Mimico","Long Branch","Port Credit","Clarkson",
+            "Oakville","Hamilton"}
+        
+        
+    } ;
+    
+    private int lineNumber = 1;
+    private String[] availableStations = availableStationsMM[lineNumber - 1];
+    
+    float flatEntryPrice = 4f;
+    
+    void addFunds(double amount){
+        cardBalance += amount;
+        System.out.println("Your new balance is $" + cardBalance);
+    }
+    void tapOn(String sourceStation){
+        if(cardBalance < 0){
+            System.out.println("Sorry, but you cannot Tap "
+            + "On because your card balance is $" + cardBalance);
+           
+            return;
+        }
         //validate 
         setStationSource(sourceStation);
         
     }
     //just like tapOn
     void tapOff(String station){
+        if(stationSource.length() == 0){
+            System.out.println("Uh oh! You didn't Tap On "
+            + "therefore, you cannot tap off");
+            return;
+        }
         setStationDestination(station);
+        tripTotal();
     }
     //return the index difference between source station 
     // and destination station
     //get absolute value
-    int getDuration(){
+    private int getDuration(){
         int indexSrc = -1;
         int indexDest = -1;
         
@@ -62,14 +97,16 @@ What attributes do we need to make methods above functional?
     }
     //duration * flatEntryPrice
     //SUB card balance by trip total price
-    float tripTotal(){
+    private float tripTotal(){
         float total = getDuration() * flatEntryPrice;
         cardBalance -= total;
+        System.out.println("Your trip total was $" + total + ".");
+        System.out.println("Your card balance is $" + cardBalance);
         return total;
     }
     
     //setter: set the value of this instance variable
-    void setStationDestination(String dest){
+    private void setStationDestination(String dest){
        
         for(int i = 0; i < availableStations.length; i++){
             
@@ -81,7 +118,7 @@ What attributes do we need to make methods above functional?
         
     }
     //setter: set the value of this instance variable
-    void setStationSource(String src){
+    private void setStationSource(String src){
        
         for(int i = 0; i < availableStations.length; i++){
             
@@ -96,15 +133,68 @@ What attributes do we need to make methods above functional?
         return stationSource;
     }
     
+    //constructor is a special method used to BUILD, hence construct,
+    //the object
+    
+    public TakeGoTrain(){}
+    
+    public TakeGoTrain(String source, String destination){
+        tapOn(source);
+        tapOff(destination);
+    }
+    
+    public void setLineNumber(int lineNumber){
+        
+        if(lineNumber >= 1 && lineNumber <= availableStationsMM.length){
+            this.lineNumber = lineNumber;
+            availableStations = availableStationsMM[this.lineNumber - 1]; 
+            System.out.println("You are travelling on Line Number " + lineNumber);
+            System.out.println("The stations available are");
+            
+            for(int i = 0; i < availableStations.length; i++){
+                if(i == availableStations.length - 1){
+                    System.out.print("and ");
+                }
+                System.out.print(availableStations[i]);
+                if(i == availableStations.length - 1){
+                    System.out.print(".");
+                }
+                else{
+                    System.out.print(", ");
+                }
+            }
+            System.out.println(); // to create a new line character
+        }
+        else{
+            System.out.println("Sorry but line number " + lineNumber + " doesn't exist!");
+        }
+        
+    }
+    
+    public TakeGoTrain(int lineNumber){
+        
+        setLineNumber(lineNumber);
+    }
+    
+    
 }
 
 class Main {
     public static void main(String[] args) {
-        TakeGoTrain go = new TakeGoTrain();
+       
+        TakeGoTrain go = new TakeGoTrain(2);
+        
+        go.tapOn("Scarborough");
+        go.tapOff("DurhamCollege");
+    }
+    static void example1(){
+         TakeGoTrain go = new TakeGoTrain();
         go.tapOn("barrie");
         go.tapOff("Downsview Park");
         
-        System.out.println(go.tripTotal());
-        
+        //System.out.println(go.tripTotal());
+        TakeGoTrain go1 = new TakeGoTrain("barrie", "union station");
+        go1.tapOn("union station");
+        go1.tapOff("maple");
     }
 }
