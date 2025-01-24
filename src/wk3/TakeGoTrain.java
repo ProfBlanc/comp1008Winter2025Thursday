@@ -1,8 +1,5 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
-
-
-class TakeGoTrain{
+package wk3;
+public class TakeGoTrain{
     
     /*
          tapOn()    station/city source         return   cardBalance
@@ -179,22 +176,3 @@ What attributes do we need to make methods above functional?
     
 }
 
-class Main {
-    public static void main(String[] args) {
-       
-        TakeGoTrain go = new TakeGoTrain(2);
-        
-        go.tapOn("Scarborough");
-        go.tapOff("DurhamCollege");
-    }
-    static void example1(){
-         TakeGoTrain go = new TakeGoTrain();
-        go.tapOn("barrie");
-        go.tapOff("Downsview Park");
-        
-        //System.out.println(go.tripTotal());
-        TakeGoTrain go1 = new TakeGoTrain("barrie", "union station");
-        go1.tapOn("union station");
-        go1.tapOff("maple");
-    }
-}

@@ -20,7 +20,8 @@ Create a class named FuelCar
 
 
 */
-class FuelCar{
+package wk3;
+public class FuelCar{
     
     //attributes: values that store a state of object
     /*
@@ -67,23 +68,4 @@ class FuelCar{
     
 }
 
-class Main {
-    public static void main(String[] args) {
-        
-        String s = "Hello World";
-        System.out.println(s);
-        
-        FuelCar fc = new FuelCar();
-        System.out.println(fc.tankCapacity);
-        //fc.tankCapacity = -20;        
-        System.out.println(fc.tankCapacity);
-        
-        fc.drive(15);
-        System.out.println(fc.fuelLevel);
-        
-        System.out.println(fc.needsOilChange());
-        
-        
-        
-    }
-}
+
