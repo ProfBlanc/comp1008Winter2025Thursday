@@ -1,0 +1,34 @@
+To-Do-List class
+    list of items to complete
+        hard-code (known amount)
+        dynamic list (???? amount)
+
+    add a task
+        a single
+        two tasks
+        three tasks
+
+
+overloading: creating a new variation to a method
+                ??? bc Java does not support default args for methods
+
+
+Tasks To Complete
+    create a method named: displayTasks
+        outputs all the tasks, each task on one line
+            can you create multiple, inner methods? Yes
+    view
+        overloaded
+            no-args:    output all tasks. probably in your best interest to call on displayTasks method
+            1 int arg: output just that task
+            2 int args: output tasks from index X to Y (inclusive)
+
+    delete
+        overloaded
+            1 int arg: just remove that task. for array, set task as null * do know display tasks where value == null in ANY of the view/displayTasks methods
+            2 int args: deleted asks from X to Y
+
+    update:
+        2 args: int, String
+            update the task at the given index with the specifed String task
+

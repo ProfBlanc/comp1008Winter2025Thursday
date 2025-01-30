@@ -1,7 +1,10 @@
-import wk4.ToDoList;
-public class Main {
+package wk4;
+
+public class Week4 {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
         ToDoList toDoList = new ToDoList();
+
     }
 }
