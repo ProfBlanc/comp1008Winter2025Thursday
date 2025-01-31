@@ -32,3 +32,42 @@ Tasks To Complete
         2 args: int, String
             update the task at the given index with the specifed String task
 
+___________________________________________________________________
+
+WordGuessingGame
+    create 3 sets (arrays or arraylist) of words
+        Set 1: words 5 letters are less  =>  easy list
+        Set 2: words between 5 - 8 letters or less = > medium list
+        Set 3: words more than 8 letters => hard list
+    max number of guesses (constant values)
+        easy:       10
+        medium      5
+        hard        3
+    enum  levels        easy, medium, hard
+    instance variable to store
+        currentLevel, numberOfUserGuesses, maxNumberOfGuessesGivenLevelChosen
+    String wordToGuess      chosen at random given the level chosen. choose a random word from that list
+
+    constructor
+        1-arg: level
+            set the game up to select a random word, set the number of maxNumberOfGuessesGivenLevelChosen, currentLevel
+
+    play
+        displayWord like Jeopardy ( _ in place of letters)
+        ask user to guess either word or letter
+        if user input is 1 character long
+            determine if letter is in given word
+                if yes
+                    give feedback: Yes, Letter is in word
+                        BONUS: display _, but this time, show the correctly guessed letter
+                            hint, you will need to add extra instance variables
+                if not
+                    then tell user that letter is not found in word
+        if user input is more than 1 character long
+            determine if word is correct
+                if yes
+                    congratulate
+                if no
+                    sorry message
+    Ensure than user only get X amount of guesses
+        either display Congrats, you won or Sorry, you lost
