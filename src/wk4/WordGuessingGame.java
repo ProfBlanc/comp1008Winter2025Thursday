@@ -1,6 +1,7 @@
 package wk4;
 
 import java.io.Console;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class WordGuessingGame {
@@ -15,6 +16,9 @@ public class WordGuessingGame {
     private Level currentLevel;
     private Random rand = new Random();
     private Console console = System.console();
+
+
+    private char[] lettersToDisplayToUser;
 
     private int numberOfUserGuesses = 1;
     private int maxNumberOfGuessesGivenLevelChosen;
@@ -41,14 +45,55 @@ public class WordGuessingGame {
             wordToGuess = hardWords[rand.nextInt(hardWords.length)];
         }
 
+        lettersToDisplayToUser = new char[wordToGuess.length()];
+
     }
 
     void displayDashesOfWord(){
+        for(int i = 0; i < wordToGuess.length(); i++){
 
-        System.out.println( "____\t".repeat(wordToGuess.length()));
+
+            if(lettersToDisplayToUser[i] == 0){
+
+                System.out.print("____");
+            }
+            else{
+                System.out.print(" " + lettersToDisplayToUser[i] + "  ");
+            }
+            System.out.print('\t');
+
+        }
+        System.out.println();
 
     }
+    private void didUserGuessLetterOrWord(){
 
+
+        int length = whatWordDidUserGuess.length();
+        if (length == 1) {
+            //then the user guessed a letter
+
+            if(wordToGuess.toUpperCase().contains(whatWordDidUserGuess.toUpperCase())){
+
+                char letter = whatWordDidUserGuess.toUpperCase().charAt(0);
+                for(int i = 0; i < wordToGuess.toUpperCase().length(); i++){
+                    if( letter == wordToGuess.toUpperCase().charAt(i)){
+                        lettersToDisplayToUser[i] = wordToGuess.toUpperCase().charAt(i);
+                    }
+                }
+
+
+
+
+            }
+
+        }
+        else {
+            //the user guessed a word
+            wordGuessedByUser = whatWordDidUserGuess.equals(wordToGuess);
+        }
+
+    }
     void play(){
         do{
             displayDashesOfWord();
@@ -56,9 +101,10 @@ public class WordGuessingGame {
             whatWordDidUserGuess = console.readLine();
             System.out.println("You guessed " + whatWordDidUserGuess);
             numberOfUserGuesses++;
+            didUserGuessLetterOrWord();
 
         }
-        while(numberOfUserGuesses <= maxNumberOfGuessesGivenLevelChosen || !wordGuessedByUser);
+        while(numberOfUserGuesses <= maxNumberOfGuessesGivenLevelChosen && !wordGuessedByUser);
 
     }
 }

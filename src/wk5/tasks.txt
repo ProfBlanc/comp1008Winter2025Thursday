@@ -1,0 +1,30 @@
+Picnic Game
+
+Rule of the game is to bring a unique item to the picnic
+1) If you are the first person, you bring anything to
+the picnic.
+2) Second person and onwards, you must state all
+previous items, THEN bring a unique item to the picnic
+3)Continue until rules are broken
+Use:    StringBuilder at all times
+        ArrayList
+        Loops
+
+
+Games Starts:
+For the first prompt:
+    As picnic organizer, what are you bringing to the picnic?
+        Whatever user enters, add to ArrayList<String> of picnicItems
+Second prompt and onwards
+    You are invited to a picnic. There are X items
+    in the picnic inventory, what are they?
+
+    Item 1 of X? user enters something
+        evaluate to determine if something is in picnic
+        YES: allow user to continue guessing
+        NO: Sorry, but {item} isn't in inventory
+            stop playing game
+    IFF user correctly guessed all items
+        Ask user to input a new item:
+            they can put anything
+The game continues
