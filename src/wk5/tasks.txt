@@ -28,3 +28,31 @@ Second prompt and onwards
         Ask user to input a new item:
             they can put anything
 The game continues
+
+
+Task 2
+Budget Calculator
+
+Define a class that creates a budget
+    Stores
+        Monthly Gross income
+        List of expenses
+            2 lists
+                list 1: stores name of expense
+                list 2: stores amount of expense
+    Calculates
+        Net income: taking 85% of Gross Income
+        total expense value (adding all expense amounts)
+    Allows user to add expense
+        name & amount
+            stores it in two lists
+            THROWS exception if expense value will surpass the monthly NET income
+        Constructor that stores monthly groess income
+    NO String values except for method parameters
+        Use StringBuilder
+
+b = Budget(100); net income is 85
+b.addExpense("meal", 10)
+b.addExpense("bus fare", 3)
+b.addExpense("laptop", 400)// should throw exception
+
