@@ -1,0 +1,54 @@
+inheritance
+	building a class based on another class
+	why?
+		use already existing features
+		what features?
+			instance variables
+			instance methods
+		Q: can I choose what to keep and discard?
+			NO: all non-private instance vars & methods kept
+		Q: can I change a value of instance var?
+			absolutely
+		Q: can I change the behaviour of method
+			yuppers!
+	I still don't get it. why would I want to do this?
+		1) Add features to an existing class
+		2) Group features in a class to code in DRY manner
+	
+	Practice Examples
+		Human			Hero
+		 
+
+		Trip			RoadTrip
+					BusTrip
+					PlaneTrip
+
+
+Old/Previously Existing Class Terms		New Class Terms
+
+
+base						derived
+super						sub
+parent						child
+
+
+
+keywords
+
+SubClass extends Superclass{}
+super	refers to super class
+
+
+Concepts
+
+In java 1 class can only inherit from ONE other class
+
+every Java class inherits Object class
+	Object class is the Godfather class: base class for everyone
+
+
+Super class is more general than Sub class
+	What does general means?
+		It has less stuff in it (instance vars, methods)
+
+* Constructors are not inherited in sub classes		
