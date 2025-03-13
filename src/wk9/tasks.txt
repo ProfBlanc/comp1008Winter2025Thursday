@@ -1,0 +1,48 @@
+CheckingAccount
+    attributes
+        number of transactions
+        max amount of transactions
+        balance
+    methods
+        withdraw(amount):
+            increase number of transaction
+            if limit of max transaction reached, disllow withdraw
+            substract amount from balance. Disallow having negative balance
+        deposit(amount)
+            add amount to balance
+
+SavingAccount
+    attributes
+        minimum balance: 100
+    * special behaviour = only 1 withdraw allowed
+
+Task 2
+Create a class named Restaurant
+    attributes
+        address: String
+        averageMealCostPerPerson: double
+    method
+        dineIn(number of people)
+            return averageMealCostPersonPerson * number of people
+        takeOut(numbers of meals)
+            return average meal cost * number of meals
+        delivery(totalCostOfMeals)
+            return totalCostOfMeals + delivery charge (your choice of value)
+
+FastFoodRestaurant
+    amountOfGrease/Oil: double amount
+        dineIn(number of people)
+            limit to only 4 people. No more
+        takeOut(number of meals)
+            maxiumum of 2 meals
+        delivery(totalCost)
+            min of 20-23 for total cost
+
+        * if limits not reached, throw exception
+
+FancyRestaurant
+    String: dressCode
+        takeOut(number of meals)
+            return an exception => not allowed to takeOut
+        delivery(totalCost)
+            add automatically a 20% gratuity to total cost + delivery
