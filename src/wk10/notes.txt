@@ -1,0 +1,76 @@
+Polymorhpism
+poly	=	many
+morphism	forms
+
+Two O's
+
+overriding
+	new implementation to something: a method
+		toString()
+overloading
+	new variation
+		a  method with 1 arg, 2-args, etc
+			constructors
+
+
+
+a class can have components
+
+Abstract class
+
+interface
+
+		both: components of a class
+
+Abstract class
+	used to create a class with purpose of group similar entities
+
+
+	Trip
+	-cost
+	-distance	
+	-orgin
+	-destination
+
+		BusTrip
+			-maxPassengers
+		CarTrip
+			-washroomBreakStops
+		PlaneTrip
+
+	cannot be instantiated
+	used as a dedicated SuperClass
+	abstract class CAN contain all features of Concrete class
+		constructors, instance variables, constants, methods
+	NEW FEATURE ALERT
+		an abstract class can have an abstract method
+			whhhaaaaaat?! What is that?
+		abstract method: a method can has no default implemention. it is a method that has no method body
+
+	Shape
+		area
+		perimeter
+			what is the default formula to calculate any shape's 
+			area and/or perimeter?
+
+
+
+
+interface another component of a class
+	only contains constants and method definitions (abstract methods)
+	-list of requirements
+
+	
+	Pet
+		speak
+		eat
+	
+	DangerousPet
+		dangerLevel
+		optimalFeedingTime
+	
+	all entities are public
+
+How do I know what to choose?
+	1) Abstract classes contain more features
+	2) A class can implement many interfaces
